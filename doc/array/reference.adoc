@@ -1,7 +1,7 @@
 ////
 Copyright 2001-2004 Nicolai M. Josuttis
 Copyright 2012 Marshall Clow
-Copyright 2024 Christian Mazakas
+Copyright 2024-2025 Christian Mazakas
 Distributed under the Boost Software License, Version 1.0.
 https://www.boost.org/LICENSE_1_0.txt
 ////
@@ -128,9 +128,7 @@ template<typename T, std::size_t N, std::size_t Idx>
   T boost::get(const array<T, N>&);
 ```
 
-### Description
-
-#### array public construct/copy/destruct
+### construct/copy/destruct
 
 ```
 template<typename U> array& operator=(const array<U, N>& other);
@@ -140,7 +138,7 @@ Effects: :: `std::copy(rhs.begin(), rhs.end(), begin())`
 
 ---
 
-#### array iterator support
+### iterator support
 
 ```
 iterator begin();
@@ -180,7 +178,7 @@ Throws: :: will not throw
 
 ---
 
-#### array reverse iterator support
+### reverse iterator support
 
 ```
 reverse_iterator rbegin();
@@ -218,7 +216,7 @@ Throws: ::  will not throw
 
 ---
 
-#### array capacity
+### capacity
 
 ```
 size_type size();
@@ -246,7 +244,7 @@ Throws: ::  will not throw
 
 ---
 
-#### array element access
+### element access
 
 ```
 reference operator[](size_type i);
@@ -309,7 +307,7 @@ Throws: :: will not throw
 
 ---
 
-#### array modifiers
+### modifiers
 
 ```
 void swap(array<T, N>& other);
@@ -328,7 +326,7 @@ Effects: :: `std::fill_n(begin(), N, value)`
 
 ---
 
-#### array specialized algorithms
+### specialized algorithms
 
 ```
 template<typename T, std::size_t N> void swap(array<T, N>& x, array<T, N>& y);
@@ -339,7 +337,7 @@ Throws: :: will not throw.
 
 ---
 
-#### array comparisons
+### comparisons
 
 ```
 template<typename T, std::size_t N>
@@ -395,7 +393,7 @@ Returns: :: `!(x < y)`
 
 ---
 
-#### array specializations
+### specializations
 
 ```
 template<typename T, std::size_t N, std::size_t Idx>
